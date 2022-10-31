@@ -4,31 +4,31 @@ void main()
 {
 int choice,length;
 char a[50],b[50];
-printf("1.length of string");
-printf("2.Copying a string");
-printf("3.Comparing a string");
-printf("4.concatenate two strings");
-printf("Enter your Choice");
+printf("\n1.length of string");
+printf("\n2.Copying a string");
+printf("\n3.Comparing a string");
+printf("\n4.concatenate two strings");
+printf("\nEnter your Choice");
 scanf("%d",&choice);
 switch(choice)
 {
 case 1:
 printf("Enter String");
-gets(a);
+scanf("%s",&a);
 printf("Length of string is %d",strlen(a));
 break;
 case 2:
 printf("Enter String a");
-gets(a);
+scanf("%s",&a);
 printf("The string stored in b before copying is %s",b);
 strcpy(b,a);
 printf("The String stored in b after copying is %s",b);
 break;
 case 3:
 printf("Enter String a");
-gets(a);
+scanf("%s",&a);
 printf("Enter String b to compare with");
-gets(b);
+scanf("%s",&b);
 if(strcmp(a,b)>0)
 printf("String A is greater than String B");
 else
@@ -36,9 +36,11 @@ printf("String B is greater than String A");
 break;
 case 4:
 printf("Enter String A");
-gets(a);
+scanf("%s",&a);
 printf("Enter String B");
-gets(b);
+scanf("%s",&b);
 printf("Concatenated word is %s",strcat(a,b));
+default:
+printf("Invalid Choice");
 }
 }
